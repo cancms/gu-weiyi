@@ -23,7 +23,7 @@
                 <a target="_blank" href="{{ $item.url }}" >{{ $item.title | markdownify | emojify}}</a>
             </div>
             <div class=" pub-authors">
-                {{ $item.authors_text | markdownify | emojify}}
+                {{ $item.authors_text | markdownify | emojify}} ({{$item.year }})
             </div>
             <div class=" pub-journal">
                 {{ $item.journal | markdownify | emojify}}

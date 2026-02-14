@@ -100,10 +100,18 @@ body {
   .pub-title {
 
     font-size: 1.5rem;
+    padding: 1rem 0;
 
   }
   .pub-authors {
-
+    strong {
+      font-weight: bold;
+      color: #000000;
+    }
+    font-size: 0.85rem;
+  }
+  .pub-journal {
+    font-size: 0.85rem;
   }
 }
 
