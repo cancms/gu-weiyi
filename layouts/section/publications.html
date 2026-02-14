@@ -1,6 +1,6 @@
 {{- define "main" -}}
 
-    {{ $projects := .Site.Data.projects.projects }}
+    {{ $publications := .Site.Data.selected_publications }}
 
 
     {{/* partial "page_header.html" . */}}
@@ -8,19 +8,28 @@
   <div class="universal-wrapper page-papers">
 
     <div class="pt-3 pb-3">
-      <h1>Projects</h1>
+      <h1>{{ .Title }}</h1>
     </div>
-      {{ range $index, $item := $projects }}
+      {{ range $index, $item := $publications }}
 
         <div class="card media stream-item">
           <div class="card-body">
 
-            <div class="section-subheading card-title exp-title my-0">
-                {{ $item.title | markdownify | emojify}}
+            <div class="pub-type my-0">
+                {{ $item.article_type | markdownify | emojify}}
             </div>
-            <div class=" author-info">
-                {{ $item.author_info | markdownify | emojify}}
+
+            <div class="pub-title exp-title my-0">
+                <a target="_blank" href="{{ $item.url }}" >{{ $item.title | markdownify | emojify}}</a>
             </div>
+            <div class=" pub-authors">
+                {{ $item.authors_text | markdownify | emojify}}
+            </div>
+            <div class=" pub-journal">
+                {{ $item.journal | markdownify | emojify}}
+            </div>
+
+            {{/*
 
               {{with $item.description}}<div class="card-text">{{ . | markdownify | emojify}}</div>{{end}}
 
@@ -34,6 +43,8 @@
                     {{end}}
                 </div>
               {{end}}
+            */}}
+
           </div>
         </div>
 

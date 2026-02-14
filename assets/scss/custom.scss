@@ -1,6 +1,33 @@
 // Override this file to add your own SCSS styling.
 
-$text-primary-color: #ff3860;
+$text-primary-color: #8c1515;
+$body-text-color: #403f3f;
+
+
+
+
+
+
+@font-face {
+  font-family: 'ss';
+  src:  url(../fonts/sourcesanspro-regular-webfont.woff) format('woff'),
+        url(../fonts/sourcesanspro-bold-webfont.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "ss", arial, sans-serif;
+  color: $body-text-color;
+}
+.navbar-light, .section-subheading, h1, h2, h3, h4, h5, h6 {
+  font-family: "ss", arial, sans-serif;
+}
+
+.navbar  {
+  background-color: #8c1515;
+  font-size: 1rem;
+}
 
 
 .wg-about{
@@ -63,6 +90,25 @@ $text-primary-color: #ff3860;
     font-weight: bold;
   }
 }
+
+
+
+.page-papers {
+  .pub-type {
+    text-transform: uppercase;
+  }
+  .pub-title {
+
+    font-size: 1.5rem;
+
+  }
+  .pub-authors {
+
+  }
+}
+
+
+
 
 
 // 手机
