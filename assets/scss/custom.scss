@@ -44,20 +44,7 @@ body {
 }
 
 #research {
-  .research-list-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
 
-    .card-simple:first-of-type {
-      margin-top: 20px !important;
-    }
-  }
-
-  .section-heading h1 {
-    margin: 20px 0 10px 0;
-  }
 }
 
 
@@ -92,6 +79,41 @@ body {
 }
 
 
+.site-header-container {
+  background-size: cover;
+  .scrim  {
+    padding: 9em 1em !important;
+
+    .site-header {
+      text-align: center;
+    }
+    .title {
+      font-size: 3rem;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .subtitle {
+      color: #fff;
+    }
+  }
+
+}
+.page-research {
+  .research-list-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+
+    .card-simple:first-of-type {
+      margin-top: 20px !important;
+    }
+  }
+
+  .section-heading h1 {
+    margin: 20px 0 10px 0;
+  }
+}
 
 .page-papers {
   .pub-type {

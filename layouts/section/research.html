@@ -1,0 +1,54 @@
+{{- define "main" -}}
+
+  {{/*
+  {{ $query := where (where site.RegularPages "Type" "research") "Params.featured" true }}
+  {{ $query = sort $query "weight" "asc" }}
+*/}}
+
+
+    {{ $publications := .Site.Data.selected_publications }}
+
+
+    {{/* partial "page_header.html" . */}}
+
+
+
+  {{/* 头部图片 */}}
+  <div class="site-header-container has-cover"
+       style='background-image: url({{ .Params.banner_image | relURL }});'>
+    <div class="scrim has-cover">
+      <div class="site-header">
+        <h1 class="title">{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="universal-wrapper page-research">
+
+    {{/*<div class="pt-3 pb-3">
+      <h1>{{ .Title }}</h1>
+
+    </div>*/}}
+
+
+    <div class="pt-5 pb-5">
+      <div class="p row">
+        <div class="col-12 col-md-4" style="        border-right: .125rem solid #e0e0e0;"><h1>{{ .Params.research_desc.title }}</h1></div>
+        <div class="col-1 col-md-1"></div>
+        <div class="col-12 col-md-7" >{{ .Params.research_desc.desc }}</div>
+
+      </div>
+    </div>
+
+
+    {{  partial "widgets/featured"  (dict
+        "page"  .Page
+    )
+    }}
+
+  </div>
+
+{{- end -}}
